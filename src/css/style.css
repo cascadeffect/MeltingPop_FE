@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+#wrap {
+    display: block;
+    border: none;
+}
+
+/* navigation bar */
+.navigation {
+    display: flex;
+    justify-content: space-between; /* 수평 방향 정렬 */
+    align-items: center;            /* 수직 방향 정렬 */
+    border-bottom: solid 1px #000;
+    background-color: #fff;
+    padding: 15px 20px;
+}
+
+/* navigation bar - logo */
+.nav-logo {
+    flex-shrink: 0;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
+    font-size: 30px;
+    color: #000;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-logo i {
+    color: #000;
+    padding: 0 5px 0 0;
+}
+
+/* navigaion bar - search */
+.nav-search {
+    display: flex;
+    flex-grow: 1;       /* 1; flex-basis(여기선 width)보다 커질 수 있음 */
+    justify-content: center;
+    width: 300px;
+    height: 35px;
+    padding: 0 50px;
+    max-width: 800px;
+}
+
+.nav-search input {
+    flex-grow: 1;
+    width: 255px;
+    border: 1px solid #000;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.nav-search button {
+    flex-shrink: 1;     /* TODO: 0(고정) or 1(기본값) ?*/
+    width: 45px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-search i {
+    color: #fff;
+    font-size: 15px;
+}
+
+/* navigation bar - user */
+.nav-usr {
+    flex-shrink: 0;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    padding: 5px 0;
+}
+
+.nav-usr i {
+    color: #000;
+    padding : 0 0 0 5px;
+}
+
+@media screen and (max-width: 650px) {
+    .navigation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-usr {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .nav-search {
+        width: 100%;
+        padding: 0;
+        margin-top: 15px;
+    }
+}
