@@ -9,11 +9,6 @@ a {
     text-decoration: none;
 }
 
-#wrap {
-    display: block;
-    border: none;
-}
-
 /* navigation bar */
 .navigation {
     display: flex;
@@ -27,6 +22,7 @@ a {
 /* navigation bar - logo */
 .nav-logo {
     flex-shrink: 0;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
+    width: 200px;
     font-size: 30px;
     color: #000;
     font-family: 'Nunito', sans-serif;
@@ -71,7 +67,9 @@ a {
 
 /* navigation bar - user */
 .nav-usr {
-    flex-shrink: 0;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
+    flex-shrink: 1;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
+    width: 200px;
+    text-align: right;
     font-size: 15px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
@@ -83,7 +81,7 @@ a {
     padding : 0 0 0 5px;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 660px) {
     .navigation {
         flex-direction: column;
         align-items: flex-start;
@@ -97,5 +95,63 @@ a {
         width: 100%;
         padding: 0;
         margin-top: 15px;
+    }
+}
+
+/* main */
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cont-section {
+    width: 400px;
+}
+
+.category {
+    padding: 20px;
+}
+
+.category .category-head {
+    width: 100%;
+    background-color: #000;
+    padding: 5px;
+}
+
+.category .category-link {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+    color: #fff;
+}
+
+.category ul, ol {
+    list-style-type: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 200;
+}
+
+.category .category-item {
+    border-bottom: 1px solid #d3d3d3;
+    padding: 5px;
+    /* white-space: nowrap;        공백은 1개민 표시, 텍스트 줄바꿈 X */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* .category li:nth-of-type(n+11) {
+    display: none;
+}
+
+.category .updated-song:nth-of-type(n+22) {
+    display: none;
+} */
+
+@media screen and (max-width: 660px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .cont-section {
+        width: 100%;
     }
 }
