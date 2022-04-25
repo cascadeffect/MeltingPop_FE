@@ -1,0 +1,26 @@
+// login, forgot-pw
+let id = $('#id');
+let pw = $('#pw');
+let email = $('#email');
+let btn = $('#btn');
+
+$(btn).on('click', function() {
+    if($(id).val() == "") {
+        $(id).next('label').addClass('warning');
+        setTimeout(function() {
+            $('label').removeClass('warning');
+        }, 1500)
+    }
+    else if($(pw).val() == "") {
+        $(pw).next('label').addClass('warning');
+        setTimeout(function() {
+            $('label').removeClass('warning');
+        }, 1500)
+    }
+    else if($(email).val() == "") {
+        $(email).next('label').addClass('warning');
+        setTimeout(function() {
+            $('label').removeClass('warning');
+        }, 1500)
+    }
+});
