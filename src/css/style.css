@@ -9,7 +9,8 @@ a {
     text-decoration: none;
 }
 
-/* navigation bar */
+/* index
+navigation bar */
 .navigation {
     display: flex;
     justify-content: space-between; /* 수평 방향 정렬 */
@@ -19,7 +20,9 @@ a {
     padding: 15px 20px;
 }
 
-/* navigation bar - logo */
+/*c index
+navigation bar
+logo */
 .nav-logo {
     flex-shrink: 0;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
     width: 200px;
@@ -33,7 +36,9 @@ a {
     padding: 0 5px 0 0;
 }
 
-/* navigaion bar - search */
+/* index
+navigaion bar
+search */
 .nav-search {
     display: flex;
     flex-grow: 1;       /* 1; flex-basis(여기선 width)보다 커질 수 있음 */
@@ -65,7 +70,9 @@ a {
     font-size: 15px;
 }
 
-/* navigation bar - user */
+/* index
+avigation bar
+user */
 .nav-usr {
     flex-shrink: 1;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
     width: 200px;
@@ -98,28 +105,29 @@ a {
     }
 }
 
-/* main */
-.container {
+/* index
+main */
+.main {
     display: flex;
     justify-content: center;
     margin: 20px;
 }
 
-.cont-section {
-    width: 400px;
+.main-section {
+    width: 50%;
 }
 
-.category {
+.main-section .category {
     padding: 20px;
 }
 
-.category .category-head {
+.category-head {
     width: 100%;
     background-color: #000;
     padding: 5px;
 }
 
-.category .category-link {
+.category-link {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 300;
     color: #fff;
@@ -137,21 +145,128 @@ a {
     /* white-space: nowrap;        공백은 1개민 표시, 텍스트 줄바꿈 X */
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
-
-/* .category li:nth-of-type(n+11) {
-    display: none;
-}
-
-.category .updated-song:nth-of-type(n+22) {
-    display: none;
-} */
 
 @media screen and (max-width: 660px) {
-    .container {
+    .main {
         flex-wrap: wrap;
     }
-    .cont-section {
+    .main-section {
         width: 100%;
     }
+}
+
+/* login */
+
+/* body */
+#login-page, #forgot-pw-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+/* login-form */
+.login-wrap, .forgot-pw-wrap {
+    position: relative;
+    z-index: 1;
+}
+
+.login-wrap h1, .forgot-pw-wrap h1 {
+    font-size: 45px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.input-area {
+    width: 400px;
+    position: relative;
+    margin-top: 20px;
+}
+
+.input-area input {
+    width: 100%;
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #666;
+    font-size: 18px;
+    color: #000;
+    outline: none;
+}
+
+.input-area label {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 17px;
+    color: #666;
+    transition: all .5s ease;
+}
+
+.input-area label.warning {
+    color: red !important;
+    animation: warning .3s ease;
+    animation-iteration-count: 3;
+}
+@keyframes warning {
+    0% {transform: translatex(-3px);}
+    25% {transform: translatex(3px);}
+    50% {transform: translatex(-3px);}
+    75% {transform: translatex(3px);}
+}
+
+.input-area input:focus + label,
+.input-area input:valid + label {
+    top: -2px;
+    font-size: 14px;
+    color: #666;
+}
+
+.btn-area {
+    margin-top: 30px;
+}
+
+.btn-area button {
+    width: 100%;
+    height: 50px;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.usr-opt {
+    padding: 40px 0 50px;
+    text-align: center;
+    color: #000;
+}
+
+.usr-opt ol, ul {
+    list-style: none;
+}
+
+.usr-opt li {
+    display: inline-block;
+    position: relative;
+}
+
+.usr-opt a {
+    display: inline-block;
+    font-size: 15px;
+    /* color: #666; */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.usr-opt .bar {
+    padding : 0 10px 0;
 }
