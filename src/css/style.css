@@ -20,7 +20,7 @@ navigation bar */
     padding: 15px 20px;
 }
 
-/*c index
+/* index
 navigation bar
 logo */
 .nav-logo {
@@ -52,6 +52,7 @@ search */
 .nav-search input {
     flex-grow: 1;
     width: 255px;
+    padding: 5px 7px;
     border: 1px solid #000;
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -71,7 +72,7 @@ search */
 }
 
 /* index
-avigation bar
+navigation bar
 user */
 .nav-usr {
     flex-shrink: 1;     /* 0; flex-basis(여기선 width)보다 작아질 수 없음 = 고정폭 */
@@ -142,7 +143,6 @@ main */
 .category .category-item {
     border-bottom: 1px solid #d3d3d3;
     padding: 5px;
-    /* white-space: nowrap;        공백은 1개민 표시, 텍스트 줄바꿈 X */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -158,9 +158,7 @@ main */
 }
 
 /* login */
-
-/* body */
-#login-page, #forgot-pw-page {
+#login-page, #forgot-pw-page, #join-page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,13 +168,14 @@ main */
     font-weight: 300;
 }
 
-/* login-form */
-.login-wrap, .forgot-pw-wrap {
+/* login
+login-form */
+.login-wrap, .forgot-pw-wrap, .join-wrap {
     position: relative;
     z-index: 1;
 }
 
-.login-wrap h1, .forgot-pw-wrap h1 {
+.login-wrap h1, .forgot-pw-wrap h1, .join-wrap h1 {
     font-size: 45px;
     color: #000;
     text-align: center;
@@ -259,14 +258,82 @@ main */
     position: relative;
 }
 
-.usr-opt a {
+.usr-opt li a {
     display: inline-block;
     font-size: 15px;
-    /* color: #666; */
+    color: #333;
     text-decoration: none;
     cursor: pointer;
 }
 
 .usr-opt .bar {
     padding : 0 10px 0;
+}
+
+/* search-result */
+.tab-wrap {
+    display: block;
+    min-height: 80vh;
+    margin: 30px;
+    border: 1px solid #000;
+}
+
+.tab-menu {
+    /* display: inline-block; */
+    position: relative;
+    background-color: #fff;
+    list-style-type: none;
+    margin: 10px 10px 0 10px;
+    border-bottom: 1px solid #000;
+}
+
+.tab-menu li {
+    display: inline-block;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+}
+
+.tab-menu li a {
+    display: inline-block;
+    width: 110px;
+    text-align: center;
+    padding: 10px;
+}
+
+.tab-menu li a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.tab-content {
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    /* font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 200; */
+}
+
+/* .tab-content h4 {
+    font-weight: 300;
+} */
+
+.tab-content > div {
+    display: none;
+}
+
+.tab-content > div:first-child {
+    display: block;
+}
+
+@media screen and (max-width: 660px) {
+    .search-result-wrap {
+        margin: 10px;
+        border: none;
+    }
+    .tab-menu li a {
+        width: 100%;
+    }
 }

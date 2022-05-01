@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
+    <title>MeltingPop : 검색결과</title>
+</head>
+<div>
+    <nav class="navigation">
+        <h1 class="nav-logo"><a href="../index.html" ><i class="fa-solid fa-compact-disc"></i>MeltingPop</a></h1>
+        <form action="search-result.html" class="nav-search">
+            <input type="text" name="search" class="search-box" placeholder="검색 결과"> <!-- TODO: 검색 결과 넘어오게-->
+            <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass" class="search-icon"></i></button>
+        </form>
+        <a href="login.html" class="nav-usr">로그인/회원가입<i class="fa-solid fa-user"></i></a>
+    </nav>
+    <div class="tab-wrap"> <!-- nav -->
+        <ul class="tab-menu">
+            <li><a href="#all-tab" class="tab-btn" id="active">통합검색</a></li>
+            <li><a href="#song-tab" class="tab-btn">곡</a></li>
+            <li><a href="#album-tab" class="tab-btn">앨범</a></li>
+            <li><a href="#artist-tab" class="tab-btn">아티스트</a></li>
+            <li><a href="#lyrics-tab" class="tab-btn">가사</a></li>
+        </ul>
+        <div class="tab-content" id="tab-content">
+            <div class="" id="all-tab">
+                <h4>곡</h4>
+                <ul class="song-list"></ul>
+                    Lorem ipsum dolor sit.
+                <h4>앨범</h4>
+                <ul class="album-list"></ul>
+                    Lorem ipsum dolor sit.
+                <h4>아티스트</h4>
+                <ul class="artist-list"></ul>
+                    Lorem ipsum dolor sit.
+                <h4>가사</h4>
+                <ul class="lyrics-list"></ul>
+                    Lorem ipsum dolor sit.
+            </div>
+            <div class="" id="song-tab">
+                <h4>곡</h4>
+                <ul class="song-list"></ul>
+            </div>
+            <div class="" id="album-tab">
+                <h4>앨범</h4>
+                <ul class="album-list"></ul>
+            </div>
+            <div class="" id="artist-tab">
+                <h4>아티스트</h4>
+                <ul class="artist-list"></ul>
+            </div>
+            <div class="" id="lyrics-tab">
+                <h4>가사</h4>
+                <ul class="lyrics-list"></ul>
+            </div>
+        </div>
+    </div>
+<footer>
+</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../src/js/search-result.js"></script>
+    <script src="https://kit.fontawesome.com/fd5e96c4d0.js" crossorigin="anonymous"></script>
+</body>
+</html>
