@@ -7,7 +7,6 @@ tabMenu.forEach(function(item, i) {
     item.addEventListener('click', function(e) {
         e.preventDefault();
         showContent(i);
-        moveHighlight(i);
     });
 });
 
