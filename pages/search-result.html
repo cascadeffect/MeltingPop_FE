@@ -6,18 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&family=Nunito:ital,wght@1,600&display=swap" rel="stylesheet">
-    <title>MeltingPop : 검색결과</title>
+    <title>MeltingPop : 검색 결과</title>
 </head>
 <div>
     <nav class="navigation">
         <h1 class="nav-logo"><a href="../index.html" ><i class="fa-solid fa-compact-disc"></i>MeltingPop</a></h1>
         <form action="search-result.html" class="nav-search">
-            <input type="text" name="search" class="search-box" placeholder="검색 결과"> <!-- TODO: 검색 결과 넘어오게-->
+            <input type="text" name="search" class="search-box" placeholder="검색 결과"> 
             <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass" class="search-icon"></i></button>
         </form>
         <a href="login.html" class="nav-usr">로그인/회원가입<i class="fa-solid fa-user"></i></a>
     </nav>
-    <div class="tab-wrap"> <!-- nav -->
+    <div id="wrapper">
         <ul class="tab-menu">
             <li><a href="#all-tab" class="tab-btn" id="active">통합검색</a></li>
             <li><a href="#song-tab" class="tab-btn">곡</a></li>
@@ -25,42 +25,193 @@
             <li><a href="#artist-tab" class="tab-btn">아티스트</a></li>
             <li><a href="#lyrics-tab" class="tab-btn">가사</a></li>
         </ul>
-        <div class="tab-content" id="tab-content">
+        <div class="tab-content">
             <div class="" id="all-tab">
                 <h4>곡</h4>
-                <ul class="song-list"></ul>
-                    Lorem ipsum dolor sit.
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>곡</th>
+                            <th>아티스트</th>
+                            <th>앨범</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </tr>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </tr>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <h4>앨범</h4>
-                <ul class="album-list"></ul>
-                    Lorem ipsum dolor sit.
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>앨범</th>
+                            <th>아티스트</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the album</td>
+                            <td>name of the artist</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <h4>아티스트</h4>
-                <ul class="artist-list"></ul>
-                    Lorem ipsum dolor sit.
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>아티스트</th>
+                            <th>곡</th>
+                            <th>앨범</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the artist</td>
+                            <td>name of the song</td>
+                            <td>name of the album</td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <h4>가사</h4>
-                <ul class="lyrics-list"></ul>
-                    Lorem ipsum dolor sit.
+                <table>
+                    <thead>
+                        <tr>
+                            <th>곡</th>
+                            <th>아티스트</th>
+                            <th>앨범</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </td>
+                    </tbody>
+                </table>
             </div>
+
             <div class="" id="song-tab">
                 <h4>곡</h4>
-                <ul class="song-list"></ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>곡</th>
+                            <th>아티스트</th>
+                            <th>앨범</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </tr>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </tr>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="" id="album-tab">
                 <h4>앨범</h4>
-                <ul class="album-list"></ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>앨범</th>
+                            <th>아티스트</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the album</td>
+                            <td>name of the artist</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="" id="artist-tab">
                 <h4>아티스트</h4>
-                <ul class="artist-list"></ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>아티스트</th>
+                            <th>곡</th>
+                            <th>앨범</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>order</td>
+                            <td>name of the artist</td>
+                            <td>name of the song</td>
+                            <td>name of the album</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="" id="lyrics-tab">
                 <h4>가사</h4>
-                <ul class="lyrics-list"></ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>곡</th>
+                            <th>아티스트</th>
+                            <th>앨범</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>name of the song</td>
+                            <td>name of the artist</td>
+                            <td>name of the album</td>
+                        </td>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 <footer>
 </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../src/js/search-result.js"></script>
     <script src="https://kit.fontawesome.com/fd5e96c4d0.js" crossorigin="anonymous"></script>
 </body>
