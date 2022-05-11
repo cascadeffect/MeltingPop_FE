@@ -288,6 +288,12 @@ pre {
   margin: 10px 0;
 }
 
+@media screen and (max-width: 660px) {
+  #edit-lyrics {
+    height: 200px;
+  }
+}
+
 /* PAGE: search-result */
 /* FUNC: tab-menu */
 /* .tab-wrap {
@@ -363,10 +369,14 @@ pre {
 }
 
 .tab-content th {
-  text-align: center;
+  text-align: left;
   border-bottom: 1px solid #333;
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
+}
+
+.tab-content th:first-child {
+  text-align: center;
 }
 
 .tab-content tbody > tr > td:first-child {
