@@ -9,7 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300&family=Nunito:ital,wght@1,600&display=swap"
       rel="stylesheet"
     />
-    <title>MeltingPop : 가사 보기</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <title>MeltingPop : 가사 편집</title>
   </head>
 
   <body>
@@ -38,39 +39,16 @@
     <main id="wrapper">
       <article class="board-wrap">
         <section class="board-title">
-          <h3>가사 보기</h3>
+          <h3>가사 편집</h3>
         </section>
         <section class="board-content">
-          <div class="board-view">
-            <section class="song-info">
-              <ul>
-                <dl>
-                  <dt>Udpated</dt>
-                  <dd id="updated">
-                    <script>
-                      document.getElementById("updated").innerHTML = Date();
-                    </script>
-                  </dd>
-                </dl>
-                <li class="bar">|</li>
-                <dl>
-                  <dt>Atrist</dt>
-                  <dd>ROSE</dd>
-                </dl>
-                <li class="bar">|</li>
-                <dl>
-                  <dt>Album</dt>
-                  <dd>R</dd>
-                </dl>
-              </ul>
-            </section>
-            <div>
-              <section class="song-view">
-                <section id="en-song" class="song-section">
-                  <div id="en-title" class="song-title">
-                    <h4>Song Name</h4>
-                  </div>
-                  <pre id="en-lyrics" class="song-lyrics">
+          <form action="view-lyrics.html" class="board-view" id="edit-form">
+            <section class="song-view">
+              <section id="en-song" class="song-section">
+                <div id="en-title" class="song-title">
+                  <h4>On The Ground</h4>
+                </div>
+                <pre id="en-lyrics" class="song-lyrics">
 My life's been magic, seems fantastic
 I used to have a hole in the wall with a mattress
 Funny when you want it, suddenly you have it
@@ -85,13 +63,11 @@ I worked my whole life
 Just to get high, just to realize
 Everything I need is on the
 Everything I need is on the ground
-                  </pre>
-                </section>
-                <section id="ko-song" class="song-section">
-                  <div id="ko-title" class="song-title">
-                    <h4>On the ground</h4>
-                  </div>
-                  <pre id="ko-lyrics" class="song-lyrics">
+                </pre>
+              </section>
+              <section id="ko-song" class="song-section">
+                <textarea id="edit-title" class="song-title">지상에</textarea>
+                <textarea id="edit-lyrics" class="song-lyrics">
 내 인생은 마법 같았어, 환상적인 것 같아
 나는 매트리스로 벽에 구멍을 내곤 했어
 원할 때 재미있다, 갑자기 갖게 된다
@@ -105,18 +81,22 @@ Everything I need is on the ground
 나는 평생을 일했다
 단지 높이 오르기 위해, 단지 깨닫기 위해
 내가 필요한 모든 것은
-내가 필요한 모든 것은 지상에 있다
-                  </pre>
-                </section>
+내가 필요한 모든 것은 지상에 있다</textarea
+                >
               </section>
-              <section class="btn-wrap">
-                <a href=".." class="board-btn" id="back-btn">목록</a>
-                <a href="edit-lyrics.html" class="board-btn" id="edit-btn">
-                  편집
-                </a>
-              </section>
-            </div>
-          </div>
+            </section>
+            <section class="btn-wrap">
+              <a href=".." class="board-btn" id="back-btn">취소</a>
+              <button
+                type="submit"
+                href="view-lyrics.html"
+                class="board-btn"
+                id="save-btn"
+              >
+                요청
+              </button>
+            </section>
+          </form>
         </section>
       </article>
     </main>
